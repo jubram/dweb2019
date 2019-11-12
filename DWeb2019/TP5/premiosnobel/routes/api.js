@@ -3,7 +3,7 @@ var router = express.Router();
 
 var Prizes = require('../controllers/prizes');
 
-router.get('/prizes', function(req, res) {
+router.get('/premios', function(req, res) {
     if(req.query.category) {
         Prizes.consultarCategoria(req.query.category)
             .then(dados => res.jsonp(dados))
@@ -19,19 +19,19 @@ router.get('/prizes', function(req, res) {
     }
 });
 
-router.get('/prizes/:idPrize', function(req, res) {
+router.get('/premios/:idPrize', function(req, res) {
     Prizes.consultar(req.params.idPrize)
         .then(dados => res.jsonp(dados))
         .catch(erro => res.status(500).jsonp(erro))
 });
 
-router.get('/categories', function(req, res) {
+router.get('/categorias', function(req, res) {
     Prizes.listarCategorias()
         .then(dados => res.jsonp(dados))
         .catch(erro => res.status(500).jsonp(erro))
 });
 
-router.get('/laureates', function(req, res) {
+router.get('/laureados', function(req, res) {
     Prizes.listarLaureados()
         .then(dados => res.jsonp(dados))
         .catch(erro => res.status(500).jsonp(erro))

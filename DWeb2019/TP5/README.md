@@ -14,3 +14,10 @@ Neste exercício, terás de:
    - GET /api/premios?categoria=YYY - Devolve a lista de prémios que tenham o campo "category" com o valor "YYY";
    - GET /api/premios?categoria=YYY&data=AAAA - Devolve a lista de prémios que tenham o campo "category" com o valor "YYY" e o campo "year" com um valor superior a "AAAA";
    - GET /api/laureados - Devolve uma lista ordenada alfabeticamente por nome dos laureados com os campos correspondentes ao nome, ano do prémio e categoria.
+
+# Como Usar
+
+A aplicação utiliza o banco de dados MongoDB. Assim, sugere-se a instalação e inicialização do mesmo antes de iniciar a aplicação.
+
+Os dados disponibilizados são inseridos automaticamente no MongoDB ao iniciar a aplicação (através da função `setup_db()` dentro de `myutils/myutils.js`).
+

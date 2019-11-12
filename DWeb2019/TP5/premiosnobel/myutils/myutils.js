@@ -3,6 +3,7 @@ var Prize = require('../models/prizes');
 
 function setup_db() {
     let rawdata = fs.readFileSync('prize.json');
+    console.log(rawdata);
     let prizes = JSON.parse(rawdata);
 
     prizes.forEach(element => {
